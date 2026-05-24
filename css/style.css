@@ -1,0 +1,12 @@
+/* RESET */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #212121;
+    color: #ffffff;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
