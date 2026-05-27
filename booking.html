@@ -1,60 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
-    <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Header with logo and navigation menu -->
 
-    <header id="header">
-    <div class="logo">
-        <img src="image/image-logo.png" style="width:120px; filter: brightness(3.5); alt="logo">
-    </div>
-
-         <h2>Moonlight Car Wash</h2>
-         <!-- Navigation links to all pages -->
-         <nav> 
-             <a href="index.html">Home</a>
-             <a href="about.html">About</a>
-             <a href="services.html">Services</a>
-             <a href="booking.html">Booking</a>
-             <a href="contact.html">Contact</a>
-         </nav>
+    <header>
+        <div class="logo">
+            <img src="image/image-logo.png" style="width:120px; filter: brightness(3.5);" alt="logo">
+        </div>
+        <h2>Moonlight Car Wash</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="booking.html">Booking</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
-    <!-- Booking form section -->
-
-    <section class="page-content">
-        <h1>Booking Form</h1>
-
-        <!-- Form for customers to book a car wash service -->
-
-        <form>
-            <label>Name:</label><br>
-            <input type="text"><br><br>
-
-            <label>Phone:</label><br>
-            <input type="text"><br><br>
-
-            <!-- Dropdown to select a service -->
-
-            <label>Select Service:</label><br>
-            <select>
-                <option>Basic Wash</option>
-                <option>Valet Service</option>
-                <option>Mobile Wash</option>
-            </select><br><br>
-
-            <button type="submit">Submit</button>
-        </form>
+    <section class="booking-hero">
+        <h1>Book a Service</h1>
+        <p>Fill in the form below and we will confirm your booking shortly.</p>
     </section>
 
-    <!-- Footer with copyright -->
+    <section class="booking-section">
+        <div class="booking-form">
+            <h2>Your Details</h2>
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="text" placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email address">
+            </div>
+
+            <div class="form-group">
+                <label>Select Service</label>
+                <select>
+                    <option value="">-- Choose a service --</option>
+                    <option>Basic Wash - R80</option>
+                    <option>Valet Service - R250</option>
+                    <option>Mobile Car Wash - R150</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Preferred Date</label>
+                <input type="date">
+            </div>
+
+            <div class="form-group">
+                <label>Preferred Time</label>
+                <input type="time">
+            </div>
+
+            <div class="form-group">
+                <label>Additional Notes</label>
+                <textarea placeholder="Any special requests or notes..."></textarea>
+            </div>
+
+            <button type="submit" class="btn">Submit Booking</button>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2026 Moonlight Car Wash. All rights reserved.</p>
