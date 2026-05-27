@@ -30,6 +30,10 @@ header {
     padding: 20px 40px;
 }
 
+.page-content { 
+    margin-top: 100px;
+}
+
 
 nav {
     display: flex;
@@ -218,11 +222,9 @@ nav a {
     position: relative;
     z-index: 1;
 
-
-.basic {
-    background-image: url("image/professional-washer-blue-uniform-washing-luxury-car-with-water-gun-open-air-car-wash.jpg");
+ .basic {
+     background-image: url("image/professional-washer-blue-uniform-washing-luxury-car-with-water-gun-open-air-car-wash.jpg");
 }
-
 .valet {
     background-image: url("image/car-wash-detailing-station (1).jpg");
 }
@@ -230,4 +232,8 @@ nav a {
 .mobile {
         background-image:url("image/car-wash-detail.jpg");
 
+}
+
+section {
+    padding-top: 120px;
 }
