@@ -264,7 +264,7 @@ Overall, Part 2 focused on transforming the website from a basic structure into 
 
 \- Styled navigation bar for improved usability and visual appeal.
 
-\- Designed and styled the “Our Professional Services” section using background images and overlays.
+\- Designed and styled the “Our Services” section using background images and overlays.
 
 \- Improved layout using flexbox for better alignment and responsiveness.
 
