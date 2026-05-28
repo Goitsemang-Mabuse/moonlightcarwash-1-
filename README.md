@@ -212,23 +212,93 @@ Home
 
 
 
+\## Part 2: Website Styling and Development
+
+
+
+In Part 2 of the project, the focus shifted from basic structure (HTML) to the visual design and user experience of the website using CSS. The website was styled to achieve a modern, clean, and professional appearance that reflects the nature of the car wash business.
+
+
+
+All main pages of the website were styled, including the Home page, About page, Services page, Bookings page, and Contact page. A consistent design was applied across all pages to ensure a unified look and feel. This included the use of a structured layout, consistent spacing, and a clear visual hierarchy.
+
+
+
+The styling process also involved improving the responsiveness of the website to ensure that it displays correctly on different screen sizes such as laptops and mobile devices. Navigation was enhanced to improve usability, and a sticky/positioned header was implemented to allow easy access to different sections of the website.
+
+
+
+In addition, several HTML errors identified in Part 1 were corrected, and parts of the website structure were refined to improve readability, maintainability, and overall performance. Background images, overlays, and modern layout techniques were used to enhance the visual appeal of the services section and other key areas of the website.
+
+
+
+Overall, Part 2 focused on transforming the website from a basic structure into a fully styled, user-friendly, and visually appealing web application.
+
+
+
+\---
+
+
+
+\## Changelog
+
+
+
+\### Part 1 Updates (Based on Feedback)
+
+\- Expanded website content, particularly the About Us section, to provide more detailed and meaningful information.
+
+\- Improved structure of HTML pages for better organisation and readability.
+
+\- Added additional sections such as Mission and Vision to enhance content depth.
+
+\- Corrected basic HTML errors and improved overall page structure.
+
+
+
+\### Part 2 Updates
+
+\- Applied CSS styling to all pages (Home, About, Services, Bookings, Contact).
+
+\- Implemented a consistent design theme across the entire website.
+
+\- Styled navigation bar for improved usability and visual appeal.
+
+\- Designed and styled the “Our Professional Services” section using background images and overlays.
+
+\- Improved layout using flexbox for better alignment and responsiveness.
+
+\- Enhanced typography using selected fonts for headings and body text.
+
+\- Fixed structural and syntax errors in HTML.
+
+\- Improved responsiveness for different screen sizes (mobile and desktop).
+
+\- Added visual enhancements such as hover effects, overlays, and spacing adjustments.
+
+
+
+\---
+
+
+
 \## References
 
 W3Schools. (2026). HTML Tutorial. https://www.w3schools.com
 
 
 
-Afrihost, 2025. Domains. \[Online]. Available at: https://www.afrihost.com/domains. \[Accessed on 04 April 2026]. 
+Afrihost, 2025. Domains. \[Online]. Available at: https://www.afrihost.com/domains. \[Accessed on 04 April 2026].
 
 
 
-ColorHunt, n.d. Color Palettes for Designers and Artists. \[Online]. Available at: https://colorhunt.co. \[Accessed on 04 April 2026]. 
+ColorHunt, n.d. Color Palettes for Designers and Artists. \[Online]. Available at: https://colorhunt.co. \[Accessed on 04 April 2026].
 
 
 
-FreePik, n.d. Images. \[Online]. Available at: https://www.freepik.com. \[Accessed on 04 April 2026]. 
+FreePik, n.d. Images. \[Online]. Available at: https://www.freepik.com. \[Accessed on 04 April 2026].
 
 
 
-Google Font, n.d.  Free Fonts Library. \[Online]. Available at: https://fonts.google.com. \[Accessed on 04 April 2026]. 
+Google Font, n.d.  Free Fonts Library. \[Online]. Available at: https://fonts.google.com. \[Accessed on 04 April 2026].
 
