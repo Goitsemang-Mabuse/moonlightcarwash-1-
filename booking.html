@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book a Wash | Moonlight Car Wash</title>
     <meta name="description" content="Book your car wash appointment online with Moonlight Car Wash. Choose your service, date, and time in just a few clicks.">
-
-    <meta name="description" content="Moonlight Car Wash offers professional car cleaning services in Mabopane, including basic wash, valet service, and mobile car wash at affordable prices.">
     <meta name="keywords" content="car wash Mabopane, mobile car wash, valet service, car cleaning South Africa">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -46,47 +44,56 @@
         <div class="booking-form">
             <h2>Your Details</h2>
 
-            <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" placeholder="Enter your full name">
-            </div>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="booking-name" placeholder="Enter your full name">
+                    <span class="error-message" id="booking-name-error"></span>
+                </div>
 
-            <div class="form-group">
-                <label>Phone Number</label>
-                <input type="text" placeholder="Enter your phone number">
-            </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="text" id="booking-phone" placeholder="Enter your phone number">
+                    <span class="error-message" id="booking-phone-error"></span>
+                </div>
 
-            <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" placeholder="Enter your email address">
-            </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="booking-email" placeholder="Enter your email address">
+                    <span class="error-message" id="booking-email-error"></span>
+                </div>
 
-            <div class="form-group">
-                <label>Select Service</label>
-                <select>
-                    <option value="">-- Choose a service --</option>
-                    <option>Basic Wash - R80</option>
-                    <option>Valet Service - R250</option>
-                    <option>Mobile Car Wash - R150</option>
-                </select>
-            </div>
+                <div class="form-group">
+                    <label>Select Service</label>
+                    <select id="booking-service">
+                        <option value="">-- Choose a service --</option>
+                        <option>Basic Wash - R80</option>
+                        <option>Valet Service - R250</option>
+                        <option>Mobile Car Wash - R150</option>
+                    </select>
+                    <span class="error-message" id="booking-service-error"></span>
+                </div>
 
-            <div class="form-group">
-                <label>Preferred Date</label>
-                <input type="date">
-            </div>
+                <div class="form-group">
+                    <label>Preferred Date</label>
+                    <input type="date" id="booking-date">
+                    <span class="error-message" id="booking-date-error"></span>
+                </div>
 
-            <div class="form-group">
-                <label>Preferred Time</label>
-                <input type="time">
-            </div>
+                <div class="form-group">
+                    <label>Preferred Time</label>
+                    <input type="time" id="booking-time">
+                    <span class="error-message" id="booking-time-error"></span>
+                </div>
 
-            <div class="form-group">
-                <label>Additional Notes</label>
-                <textarea placeholder="Any special requests or notes..."></textarea>
-            </div>
+                <div class="form-group">
+                    <label>Additional Notes</label>
+                    <textarea id="booking-notes" placeholder="Any special requests or notes..."></textarea>
+                </div>
 
-            <button type="submit" class="btn">Submit Booking</button>
+                <button type="submit" class="btn">Submit Booking</button>
+                <p class="success-message" id="booking-success"></p>
+            </form>
         </div>
     </section>
 

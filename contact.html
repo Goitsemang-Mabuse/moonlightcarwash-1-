@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Moonlight Car Wash</title>
     <meta name="description" content="Get in touch with Moonlight Car Wash in Mabopane. Find our location, phone number, email, and send us a message.">
-
-    <meta name="description" content="Moonlight Car Wash offers professional car cleaning services in Mabopane, including basic wash, valet service, and mobile car wash at affordable prices.">
     <meta name="keywords" content="car wash Mabopane, mobile car wash, valet service, car cleaning South Africa">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -21,7 +19,6 @@
             <img src="image/image-logo.png" style="width:120px; filter: brightness(3.5);" alt="logo">
         </div>
         <h2>Moonlight Car Wash</h2>
-
 
         <div class="hamburger" id="hamburger">
             <span></span>
@@ -85,35 +82,42 @@
         <div class="contact-form">
             <h2>Send a Message</h2>
 
-            <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" placeholder="Enter your full name">
-            </div>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="contact-name" placeholder="Enter your full name">
+                    <span class="error-message" id="contact-name-error"></span>
+                </div>
 
-            <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" placeholder="Enter your email address">
-            </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="contact-email" placeholder="Enter your email address">
+                    <span class="error-message" id="contact-email-error"></span>
+                </div>
 
-            <div class="form-group">
-                <label>Subject</label>
-                <select>
-                    <option value="" disabled selected>-- Select a subject --</option>
-                    <option value="booking">Booking Enquiry</option>
-                    <option value="pricing">Pricing &amp; Packages</option>
-                    <option value="mobile">Mobile Wash Request</option>
-                    <option value="complaint">Complaint</option>
-                    <option value="feedback">Feedback</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <select id="contact-subject">
+                        <option value="" disabled selected>-- Select a subject --</option>
+                        <option value="booking">Booking Enquiry</option>
+                        <option value="pricing">Pricing &amp; Packages</option>
+                        <option value="mobile">Mobile Wash Request</option>
+                        <option value="complaint">Complaint</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="error-message" id="contact-subject-error"></span>
+                </div>
 
-            <div class="form-group">
-                <label>Message</label>
-                <textarea placeholder="Write your message here..."></textarea>
-            </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea id="contact-message" placeholder="Write your message here..."></textarea>
+                    <span class="error-message" id="contact-message-error"></span>
+                </div>
 
-            <button class="btn">Send Message</button>
+                <button type="submit" class="btn">Send Message</button>
+                <p class="success-message" id="contact-success"></p>
+            </form>
         </div>
 
     </section>
@@ -133,7 +137,7 @@
     <footer>
         <p>&copy; 2026 Moonlight Car Wash. All rights reserved.</p>
     </footer>
- 
+
     <script src="javascript/script.js"></script>
 
 </body>
