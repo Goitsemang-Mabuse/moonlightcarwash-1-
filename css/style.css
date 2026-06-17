@@ -874,3 +874,19 @@ footer {
         font-size: 18px;
     }
 }
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+    min-height: 16px;
+}
+
+.success-message {
+    color: #4caf50;
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
