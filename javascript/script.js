@@ -133,21 +133,34 @@ if (bookingForm) {
     });
 }
 
-const accordionHeaders = document.querySelectorAll('.accordion-header');
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
 
-accordionHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-        const content = header.nextElementSibling;
-        const isOpen = header.classList.contains('active');
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const target = button.getAttribute('data-tab');
 
-        accordionHeaders.forEach(h => {
-            h.classList.remove('active');
-            h.nextElementSibling.style.maxHeight = null;
-        });
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
 
-        if (!isOpen) {
-            header.classList.add('active');
-            content.style.maxHeight = content.scrollHeight + 'px';
-        }
+        button.classList.add('active');
+        document.getElementById(target).classList.add('active');
+    });
+});
+
+const modalButtons = document.querySelectorAll('[data-modal]');
+const modalCloseButtons = document.querySelectorAll('[data-close]');
+
+modalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        document.getElementById(modalId).classList.add('active');
+    });
+});
+
+modalCloseButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-close');
+        document.getElementById(modalId).classList.remove('active');
     });
 });

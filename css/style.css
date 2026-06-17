@@ -949,3 +949,107 @@ footer {
     line-height: 1.6;
     padding-bottom: 20px;
 }
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: flex;
+}
+
+#addons.tab-content.active {
+    display: block;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #888;
+    color: #d6d6d6;
+    margin-left: 10px;
+}
+
+.btn-outline:hover {
+    background: #888;
+    color: #ffffff;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-box {
+    background-color: #2a2a2a;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 450px;
+    width: 90%;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.modal-box h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.modal-box ul {
+    color: #d6d6d6;
+    line-height: 1.8;
+    padding-left: 20px;
+}
+
+.modal-box .duration {
+    color: #9e9e9e;
+    font-size: 14px;
+    margin-top: 15px;
+}
