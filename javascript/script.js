@@ -223,3 +223,15 @@ if (mapElement) {
             marker.bindPopup('<b>Moonlight Car Wash</b><br>Mabopane, South Africa').openPopup();
         });
 }
+
+const fadeHeadings = document.querySelectorAll('.fade-heading');
+
+const headingObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.2 });
+
+fadeHeadings.forEach(heading => headingObserver.observe(heading));
