@@ -2,9 +2,11 @@
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+}
 
 const contactForm = document.getElementById('contact-form');
 
@@ -164,3 +166,60 @@ modalCloseButtons.forEach(button => {
         document.getElementById(modalId).classList.remove('active');
     });
 });
+
+const galleryImages = document.querySelectorAll('.gallery-img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.getElementById('lightbox-close');
+
+galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+    });
+});
+
+if (lightboxClose) {
+    lightboxClose.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+    });
+}
+
+if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+        }
+    });
+}
+
+const mapElement = document.getElementById('map');
+
+if (mapElement) {
+    const map = L.map('map').setView([-25.396, 27.981], 14);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    fetch('https://nominatim.openstreetmap.org/search?q=670+Lebanon+Street+Winterveld+Mabopane+South+Africa&format=json&limit=1')
+        .then(response => response.json())
+        .then(data => {
+            if (data.length > 0) {
+                const lat = parseFloat(data[0].lat);
+                const lon = parseFloat(data[0].lon);
+                map.setView([lat, lon], 16);
+
+                const marker = L.marker([lat, lon]).addTo(map);
+                marker.bindPopup('<b>Moonlight Car Wash</b><br>670 Lebanon St, Winterveld, Mabopane').openPopup();
+            } else {
+                const marker = L.marker([-25.396, 27.981]).addTo(map);
+                marker.bindPopup('<b>Moonlight Car Wash</b><br>Mabopane, South Africa').openPopup();
+            }
+        })
+        .catch(() => {
+            const marker = L.marker([-25.396, 27.981]).addTo(map);
+            marker.bindPopup('<b>Moonlight Car Wash</b><br>Mabopane, South Africa').openPopup();
+        });
+}

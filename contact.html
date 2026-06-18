@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
@@ -124,14 +126,7 @@
 
     <section class="map-section">
         <h2>Our Location</h2>
-        <iframe
-            src="https://www.google.com/maps?q=Mabopane,+Moon+Light+Car+Wash,South+Africa&output=embed"
-            width="100%"
-            height="350"
-            style="border:0; border-radius: 12px;"
-            allowfullscreen
-            loading="lazy">
-        </iframe>
+        <div id="map"></div>
     </section>
 
     <footer>
