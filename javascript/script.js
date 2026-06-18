@@ -150,6 +150,25 @@ tabButtons.forEach(button => {
     });
 });
 
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        const isOpen = header.classList.contains('active');
+
+        accordionHeaders.forEach(h => {
+            h.classList.remove('active');
+            h.nextElementSibling.style.maxHeight = null;
+        });
+
+        if (!isOpen) {
+            header.classList.add('active');
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }
+    });
+});
+
 const modalButtons = document.querySelectorAll('[data-modal]');
 const modalCloseButtons = document.querySelectorAll('[data-close]');
 

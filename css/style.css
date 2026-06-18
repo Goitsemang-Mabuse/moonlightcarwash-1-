@@ -1151,3 +1151,40 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+a, button {
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.15s ease;
+}
+
+nav a {
+    position: relative;
+}
+
+nav a:hover {
+    color: #9e9e9e;
+}
+
+nav a:active {
+    transform: scale(0.96);
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.tab-btn:active,
+.accordion-header:active,
+.modal-close:active,
+.lightbox-close:active {
+    transform: scale(0.95);
+}
+
+.social-icons a:active {
+    transform: scale(0.92);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
