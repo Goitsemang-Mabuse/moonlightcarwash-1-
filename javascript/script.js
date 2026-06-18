@@ -54,8 +54,7 @@ if (contactForm) {
 
         const successMsg = document.getElementById('contact-success');
         if (isValid) {
-            successMsg.textContent = 'Thank you! Your message has been sent.';
-            contactForm.reset();
+            contactForm.submit();
         } else {
             successMsg.textContent = '';
         }
@@ -150,6 +149,23 @@ tabButtons.forEach(button => {
     });
 });
 
+const modalButtons = document.querySelectorAll('[data-modal]');
+const modalCloseButtons = document.querySelectorAll('[data-close]');
+
+modalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        document.getElementById(modalId).classList.add('active');
+    });
+});
+
+modalCloseButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-close');
+        document.getElementById(modalId).classList.remove('active');
+    });
+});
+
 const accordionHeaders = document.querySelectorAll('.accordion-header');
 
 accordionHeaders.forEach(header => {
@@ -166,23 +182,6 @@ accordionHeaders.forEach(header => {
             header.classList.add('active');
             content.style.maxHeight = content.scrollHeight + 'px';
         }
-    });
-});
-
-const modalButtons = document.querySelectorAll('[data-modal]');
-const modalCloseButtons = document.querySelectorAll('[data-close]');
-
-modalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modalId = button.getAttribute('data-modal');
-        document.getElementById(modalId).classList.add('active');
-    });
-});
-
-modalCloseButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modalId = button.getAttribute('data-close');
-        document.getElementById(modalId).classList.remove('active');
     });
 });
 
@@ -229,7 +228,6 @@ if (mapElement) {
                 const lat = parseFloat(data[0].lat);
                 const lon = parseFloat(data[0].lon);
                 map.setView([lat, lon], 16);
-
                 const marker = L.marker([lat, lon]).addTo(map);
                 marker.bindPopup('<b>Moonlight Car Wash</b><br>670 Lebanon St, Winterveld, Mabopane').openPopup();
             } else {
@@ -242,18 +240,6 @@ if (mapElement) {
             marker.bindPopup('<b>Moonlight Car Wash</b><br>Mabopane, South Africa').openPopup();
         });
 }
-
-const fadeHeadings = document.querySelectorAll('.fade-heading');
-
-const headingObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, { threshold: 0.2 });
-
-fadeHeadings.forEach(heading => headingObserver.observe(heading));
 
 const faqSearchInput = document.getElementById('faq-search-input');
 const accordionItems = document.querySelectorAll('.accordion-item');
@@ -279,3 +265,15 @@ if (faqSearchInput) {
         noResults.style.display = visibleCount === 0 ? 'block' : 'none';
     });
 }
+
+const fadeHeadings = document.querySelectorAll('.fade-heading');
+
+const headingObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.2 });
+
+fadeHeadings.forEach(heading => headingObserver.observe(heading));
