@@ -1188,3 +1188,39 @@ button:focus-visible {
     outline: 2px solid #ffffff;
     outline-offset: 3px;
 }
+
+.faq-search {
+    max-width: 500px;
+    margin: 0 auto 40px;
+    position: relative;
+}
+
+.faq-search input {
+    width: 100%;
+    padding: 14px 45px 14px 20px;
+    background-color: #2a2a2a;
+    border: 1px solid #555;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+.faq-search input:focus {
+    border-color: #ffffff;
+}
+
+.faq-search i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9e9e9e;
+}
+
+.no-results {
+    text-align: center;
+    color: #9e9e9e;
+    display: none;
+}

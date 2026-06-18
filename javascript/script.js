@@ -254,3 +254,28 @@ const headingObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 
 fadeHeadings.forEach(heading => headingObserver.observe(heading));
+
+const faqSearchInput = document.getElementById('faq-search-input');
+const accordionItems = document.querySelectorAll('.accordion-item');
+const noResults = document.getElementById('no-results');
+
+if (faqSearchInput) {
+    faqSearchInput.addEventListener('input', () => {
+        const query = faqSearchInput.value.toLowerCase().trim();
+        let visibleCount = 0;
+
+        accordionItems.forEach(item => {
+            const questionText = item.querySelector('.accordion-header').textContent.toLowerCase();
+            const answerText = item.querySelector('.accordion-content').textContent.toLowerCase();
+
+            if (questionText.includes(query) || answerText.includes(query)) {
+                item.style.display = 'block';
+                visibleCount++;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    });
+}

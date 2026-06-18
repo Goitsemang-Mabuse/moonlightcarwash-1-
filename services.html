@@ -165,7 +165,12 @@
     <section class="faq-section">
         <h2>Frequently Asked Questions</h2>
 
-        <div class="accordion">
+        <div class="faq-search">
+            <input type="text" id="faq-search-input" placeholder="Search a question...">
+            <i class="fa fa-search"></i>
+        </div>
+
+        <div class="accordion" id="accordion-list">
             <div class="accordion-item">
                 <button class="accordion-header">
                     How long does a Basic Wash take?
@@ -206,6 +211,8 @@
                 </div>
             </div>
         </div>
+
+        <p class="no-results" id="no-results">No matching questions found.</p>
     </section>
 
     <footer>

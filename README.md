@@ -278,11 +278,85 @@ Overall, Part 2 focused on transforming the website from a basic structure into 
 
 
 
+\## Part 3: Enhancing Functionality and SEO
+
+
+
+In Part 3 of the project, the focus shifted from visual styling (CSS) to adding real interactivity, functionality, and search engine optimisation using JavaScript. The goal was to transform the website from a static, styled site into a dynamic, functional web application that responds to user actions.
+
+
+
+JavaScript was introduced across all five pages to add interactive elements, including a mobile-friendly hamburger navigation menu, an FAQ accordion, a tabbed interface for browsing service categories, modal pop-ups for additional service details, an image gallery with a lightbox viewer, and a live search/filter function for the FAQ section. An interactive map was also added to the Contact page using the Leaflet JavaScript library, replacing the static embedded map from Part 2.
+
+
+
+Both the Booking and Contact forms were upgraded with full JavaScript form validation. Fields are checked for empty input, valid email format, and valid phone number format before submission, with clear error messages shown beneath each invalid field and a success message displayed once the form is correctly completed.
+
+
+
+Scroll-based animations were also introduced, using the Intersection Observer API to fade and slide page headings into view as the user scrolls, giving the website a more polished, premium feel. Hover and click states were added across all buttons, links, and navigation items to improve interactivity and give users clear visual feedback.
+
+
+
+On the SEO side, every page was given a unique, descriptive title tag and meta description to improve search engine visibility. Image alt text was rewritten across the site to be more descriptive for accessibility and search indexing. A robots.txt file and a sitemap.xml file were created and added to the project root to guide search engine crawlers.
+
+
+
+Several bugs were identified and resolved during this phase, including a shared script.js file causing page-specific errors on pages missing certain elements (resolved by adding null checks before attaching event listeners), and a duplicate FAQ section that was accidentally created while integrating the search functionality.
+
+
+
+\---
+
+
+
+\## Changelog
+
+
+
+\### Part 3 Updates
+
+\- Added a mobile-responsive hamburger navigation menu across all pages.
+
+\- Implemented scroll-triggered fade-up animations for page headings using the Intersection Observer API.
+
+\- Added hover, active, and keyboard focus states to all buttons and links for improved interactivity and accessibility.
+
+\- Built an FAQ accordion on the Services page with smooth expand/collapse functionality.
+
+\- Added a tabbed interface (Exterior, Interior, Add-ons) to organise the Services page content.
+
+\- Implemented modal pop-ups providing extended service details (duration, full feature list) for each pricing package.
+
+\- Created an image gallery with a lightbox viewer on the About page.
+
+\- Replaced the static embedded map on the Contact page with an interactive Leaflet map.
+
+\- Added full JavaScript form validation to the Booking and Contact forms, including required field checks, email format validation, and phone number format validation, with inline error and success messages.
+
+\- Implemented a live search/filter function for the FAQ section.
+
+\- Fixed a bug where a shared script.js file caused errors on pages missing certain elements, by adding null checks before attaching event listeners.
+
+\- Fixed a duplicate FAQ section created accidentally while adding search functionality.
+
+\- Added meta descriptions and unique, descriptive title tags to all five pages for SEO.
+
+\- Rewrote image alt text across the site to be more descriptive for accessibility and search engine indexing.
+
+\- Created and added a robots.txt file and a sitemap.xml file to the project root.
+
+
+
+
+
 \---
 
 
 
 \## References
+
+
 
 W3Schools. (2026). HTML Tutorial. https://www.w3schools.com
 
@@ -292,11 +366,29 @@ Afrihost, 2025. Domains. \[Online]. Available at: https://www.afrihost.com/domai
 
 
 
-ColorHunt, n.d. Color Palettes for Designers and Artists. \[Online]. Available at: https://colorhunt.co. \[Accessed on 04 April 2026].
+ColorHunt, n.d. Color Palettes for Designers and Artists. \[Online]. Available at: https://colorhunt.co. \[Accessed on 11 April 2026].
 
 
 
-FreePik, n.d. Images. \[Online]. Available at: https://www.freepik.com. \[Accessed on 04 April 2026].
+FreePik, n.d. Images. \[Online]. Available at: https://www.freepik.com. \[Accessed on 11 April 2026].
+
+
+
+eaflet, n.d. Leaflet - a JavaScript library for interactive maps. \[Online]. Available at: https://leafletjs.com. \[Accessed on 10 June 2026].
+
+
+
+OpenStreetMap, n.d. OpenStreetMap. \[Online]. Available at: https://www.openstreetmap.org. \[Accessed on 15 June 2026].
+
+
+
+Font Awesome, n.d. Icons. \[Online]. Available at: https://fontawesome.com. \[Accessed on 10 June 2026].
+
+
+
+MDN Web Docs, n.d. Intersection Observer API. \[Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Intersection\_Observer\_API. \[Accessed on 15 June 2026].
+
+
 
 
 
