@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book a Wash | Moonlight Car Wash</title>
-    <meta name="description" content="Book your car wash appointment online with Moonlight Car Wash. Choose your service, date, and time in just a few clicks.">
-    <meta name="keywords" content="car wash Mabopane, mobile car wash, valet service, car cleaning South Africa">
+    <title>Enquiry | Moonlight Car Wash</title>
+    <meta name="description" content="Submit an enquiry about Moonlight Car Wash services, pricing, availability, or sponsorship opportunities in Mabopane.">
+    <meta name="keywords" content="car wash enquiry Mabopane, sponsor car wash, car wash pricing, mobile car wash availability">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -37,64 +37,72 @@
     </header>
 
     <section class="booking-hero">
-        <h1 class="fade-heading">Book a Service</h1>
-        <p>Fill in the form below and we will confirm your booking shortly.</p>
+        <h1 class="fade-heading">Make an Enquiry</h1>
+        <p>Ask us about our services, pricing, availability, or partnership opportunities.</p>
     </section>
 
     <section class="booking-section">
         <div class="booking-form">
-            <h2>Your Details</h2>
+            <h2>Enquiry Form</h2>
 
-            <form id="booking-form">
+            <form id="enquiry-form">
+
                 <div class="form-group">
                     <label>Full Name</label>
-                    <input type="text" id="booking-name" placeholder="Enter your full name">
-                    <span class="error-message" id="booking-name-error"></span>
-                </div>
-
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="text" id="booking-phone" placeholder="Enter your phone number">
-                    <span class="error-message" id="booking-phone-error"></span>
+                    <input type="text" id="enquiry-name" placeholder="Enter your full name">
+                    <span class="error-message" id="enquiry-name-error"></span>
                 </div>
 
                 <div class="form-group">
                     <label>Email Address</label>
-                    <input type="email" id="booking-email" placeholder="Enter your email address">
-                    <span class="error-message" id="booking-email-error"></span>
+                    <input type="email" id="enquiry-email" placeholder="Enter your email address">
+                    <span class="error-message" id="enquiry-email-error"></span>
                 </div>
 
                 <div class="form-group">
-                    <label>Select Service</label>
-                    <select id="booking-service">
-                        <option value="">-- Choose a service --</option>
-                        <option>Basic Wash - R80</option>
-                        <option>Valet Service - R250</option>
-                        <option>Mobile Car Wash - R150</option>
+                    <label>Phone Number</label>
+                    <input type="text" id="enquiry-phone" placeholder="Enter your phone number">
+                    <span class="error-message" id="enquiry-phone-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Enquiry Type</label>
+                    <select id="enquiry-type">
+                        <option value="">-- Select enquiry type --</option>
+                        <option value="service">Service / Pricing / Availability</option>
+                        <option value="sponsor">Becoming a Sponsor or Partner</option>
                     </select>
-                    <span class="error-message" id="booking-service-error"></span>
+                    <span class="error-message" id="enquiry-type-error"></span>
+                </div>
+
+                <div class="form-group" id="service-group" style="display:none;">
+                    <label>Which Service Are You Interested In?</label>
+                    <select id="enquiry-service">
+                        <option value="">-- Select a service --</option>
+                        <option value="basic">Basic Wash - R80</option>
+                        <option value="valet">Valet Service - R250</option>
+                        <option value="mobile">Mobile Car Wash - R150</option>
+                        <option value="engine">Engine Cleaning - R100</option>
+                        <option value="detailing">Interior Detailing - R120</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
-                    <label>Preferred Date</label>
-                    <input type="date" id="booking-date">
-                    <span class="error-message" id="booking-date-error"></span>
+                    <label>Your Message</label>
+                    <textarea id="enquiry-message" placeholder="Tell us more about your enquiry..."></textarea>
+                    <span class="error-message" id="enquiry-message-error"></span>
                 </div>
 
-                <div class="form-group">
-                    <label>Preferred Time</label>
-                    <input type="time" id="booking-time">
-                    <span class="error-message" id="booking-time-error"></span>
-                </div>
+                <button type="submit" class="btn">Submit Enquiry</button>
 
-                <div class="form-group">
-                    <label>Additional Notes</label>
-                    <textarea id="booking-notes" placeholder="Any special requests or notes..."></textarea>
-                </div>
-
-                <button type="submit" class="btn">Submit Booking</button>
-                <p class="success-message" id="booking-success"></p>
             </form>
+
+            <div class="enquiry-response" id="enquiry-response" style="display:none;">
+                <h3 id="response-title"></h3>
+                <p id="response-body"></p>
+                <a href="booking.html" class="btn" id="response-btn" style="display:none; margin-top: 20px;">Book Now</a>
+            </div>
+
         </div>
     </section>
 

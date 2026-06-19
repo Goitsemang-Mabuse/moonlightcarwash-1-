@@ -277,3 +277,114 @@ const headingObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 
 fadeHeadings.forEach(heading => headingObserver.observe(heading));
+
+const enquiryType = document.getElementById('enquiry-type');
+const serviceGroup = document.getElementById('service-group');
+
+if (enquiryType) {
+    enquiryType.addEventListener('change', () => {
+        if (enquiryType.value === 'service') {
+            serviceGroup.style.display = 'flex';
+        } else {
+            serviceGroup.style.display = 'none';
+        }
+    });
+}
+
+const enquiryForm = document.getElementById('enquiry-form');
+
+if (enquiryForm) {
+    enquiryForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        let isValid = true;
+
+        const name = document.getElementById('enquiry-name');
+        const nameError = document.getElementById('enquiry-name-error');
+        if (name.value.trim() === '') {
+            nameError.textContent = 'Please enter your name';
+            isValid = false;
+        } else {
+            nameError.textContent = '';
+        }
+
+        const email = document.getElementById('enquiry-email');
+        const emailError = document.getElementById('enquiry-email-error');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email.value.trim())) {
+            emailError.textContent = 'Please enter a valid email address';
+            isValid = false;
+        } else {
+            emailError.textContent = '';
+        }
+
+        const phone = document.getElementById('enquiry-phone');
+        const phoneError = document.getElementById('enquiry-phone-error');
+        const phonePattern = /^[0-9\s+()-]{7,15}$/;
+        if (!phonePattern.test(phone.value.trim())) {
+            phoneError.textContent = 'Please enter a valid phone number';
+            isValid = false;
+        } else {
+            phoneError.textContent = '';
+        }
+
+        const type = document.getElementById('enquiry-type');
+        const typeError = document.getElementById('enquiry-type-error');
+        if (type.value === '') {
+            typeError.textContent = 'Please select an enquiry type';
+            isValid = false;
+        } else {
+            typeError.textContent = '';
+        }
+
+        const message = document.getElementById('enquiry-message');
+        const messageError = document.getElementById('enquiry-message-error');
+        if (message.value.trim().length < 10) {
+            messageError.textContent = 'Please enter a message of at least 10 characters';
+            isValid = false;
+        } else {
+            messageError.textContent = '';
+        }
+
+        if (isValid) {
+            enquiryForm.style.display = 'none';
+
+            const response = document.getElementById('enquiry-response');
+            const responseTitle = document.getElementById('response-title');
+            const responseBody = document.getElementById('response-body');
+            const responseBtn = document.getElementById('response-btn');
+
+            const serviceInfo = {
+                basic: { name: 'Basic Wash', price: 'R80', duration: '20-30 minutes', available: 'Monday to Saturday, 7am - 5pm' },
+                valet: { name: 'Valet Service', price: 'R250', duration: '45-60 minutes', available: 'Monday to Saturday, 8am - 4pm' },
+                mobile: { name: 'Mobile Car Wash', price: 'R150', duration: '45-60 minutes', available: 'Monday to Friday, 8am - 3pm' },
+                engine: { name: 'Engine Cleaning', price: 'R100', duration: '30-45 minutes', available: 'Monday to Saturday, 8am - 4pm' },
+                detailing: { name: 'Interior Detailing', price: 'R120', duration: '30-45 minutes', available: 'Monday to Saturday, 8am - 4pm' }
+            };
+
+            if (type.value === 'service') {
+                const selectedService = document.getElementById('enquiry-service').value;
+                if (selectedService && serviceInfo[selectedService]) {
+                    const info = serviceInfo[selectedService];
+                    responseTitle.textContent = 'Thank you, ' + name.value.trim() + '!';
+                    responseBody.innerHTML = 'Here is the information for your selected service:<br><br>' +
+                        '<strong>Service:</strong> ' + info.name + '<br>' +
+                        '<strong>Price:</strong> ' + info.price + ' per vehicle<br>' +
+                        '<strong>Estimated Duration:</strong> ' + info.duration + '<br>' +
+                        '<strong>Availability:</strong> ' + info.available + '<br><br>' +
+                        'To book this service, click the button below or call us on <strong>082 912 2030</strong>.';
+                    responseBtn.style.display = 'inline-block';
+                } else {
+                    responseTitle.textContent = 'Thank you, ' + name.value.trim() + '!';
+                    responseBody.textContent = 'We have received your service enquiry and will get back to you shortly with pricing and availability details. You can also reach us on 082 912 2030.';
+                }
+            } else {
+                responseTitle.textContent = 'Thank you for your interest, ' + name.value.trim() + '!';
+                responseBody.innerHTML = 'We appreciate your interest in becoming a sponsor or partner of Moonlight Car Wash.<br><br>' +
+                    'A member of our team will review your enquiry and contact you within 2-3 business days to discuss potential partnership opportunities.<br><br>' +
+                    'In the meantime, feel free to reach us at <strong>info@moonlightcarwash.com</strong> or call <strong>082 912 2030</strong>.';
+            }
+
+            response.style.display = 'block';
+        }
+    });
+}

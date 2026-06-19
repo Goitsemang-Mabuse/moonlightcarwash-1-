@@ -1533,3 +1533,21 @@ button:focus-visible {
         padding: 60px 20px;
     }
 }
+
+.enquiry-response {
+    margin-top: 30px;
+    background-color: #3a3a3a;
+    border-radius: 12px;
+    padding: 30px;
+    border-left: 4px solid #ffffff;
+}
+
+.enquiry-response h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.enquiry-response p {
+    color: #d6d6d6;
+    line-height: 1.8;
+}
