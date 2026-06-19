@@ -346,6 +346,16 @@ Several bugs were identified and resolved during this phase, including a shared 
 
 \- Created and added a robots.txt file and a sitemap.xml file to the project root.
 
+\- Integrated Formspree into the Contact form to enable real email submission and delivery.
+
+\- Built and tested contact form email functionality, confirming submissions are received via Formspree dashboard.
+
+\- Added active nav link highlighting and keyboard focus states across all pages for improved accessibility.
+
+\- Added scroll-triggered sticky header effect that shrinks and darkens on scroll.
+
+\- Added live FAQ search/filter functionality on the Services page.
+
 
 
 
@@ -383,6 +393,10 @@ OpenStreetMap, n.d. OpenStreetMap. \[Online]. Available at: https://www.openstre
 
 
 Font Awesome, n.d. Icons. \[Online]. Available at: https://fontawesome.com. \[Accessed on 10 June 2026].
+
+
+
+Formspree, n.d. HTML Forms with No Backend. \[Online]. Available at: https://formspree.io. \[Accessed on 19 June 2026].
 
 
 
