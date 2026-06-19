@@ -356,7 +356,13 @@ Several bugs were identified and resolved during this phase, including a shared 
 
 \- Added live FAQ search/filter functionality on the Services page.
 
+\- Built enquiry.html with a dynamic enquiry form covering both service/pricing/availability enquiries and sponsorship/partnership enquiries.
 
+\- Added JavaScript validation to enquiry form checking name, email, phone number, enquiry type, and message fields with inline error messages.
+
+\- Implemented dynamic response system on enquiry form that displays personalised pricing, duration, and availability information based on the selected service, or a partnership follow-up message for sponsor enquiries.
+
+\- Added Enquiry page link to the navigation bar across all pages.
 
 
 
