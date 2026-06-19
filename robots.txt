@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://goitsemang-mabuse.github.io/moonlightcarwash-1-/sitemap.xml
